@@ -1,0 +1,18 @@
+{
+    "description": "Demo wiki for rimir plugins",
+    "plugins": [
+        "tiddlywiki/highlight"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ],
+    "build": {
+        "index": [
+            "--render",
+            "$:/plugins/tiddlywiki/tiddlyweb/save/offline",
+            "index.html",
+            "text/plain"
+        ]
+    }
+}

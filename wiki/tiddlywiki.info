@@ -10,7 +10,7 @@
     "build": {
         "index": [
             "--render",
-            "$:/plugins/tiddlywiki/tiddlyweb/save/offline",
+            "$:/core/save/all",
             "index.html",
             "text/plain"
         ]

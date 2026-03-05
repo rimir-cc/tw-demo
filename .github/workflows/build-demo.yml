@@ -30,14 +30,9 @@ jobs:
             components
             core-hook
             doc-template
-            file-upload
-            filesystem-watcher
-            git-int
             json-dsl
             orga
             orga-tools
-            realms
-            runner
             theme
             typed
           )

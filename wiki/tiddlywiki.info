@@ -1,7 +1,20 @@
 {
     "description": "Demo wiki for rimir plugins",
     "plugins": [
-        "tiddlywiki/highlight"
+        "tiddlywiki/highlight",
+        "rimir/components",
+        "rimir/core-hook",
+        "rimir/doc-template",
+        "rimir/file-upload",
+        "rimir/filesystem-watcher",
+        "rimir/git-int",
+        "rimir/json-dsl",
+        "rimir/orga",
+        "rimir/orga-tools",
+        "rimir/realms",
+        "rimir/runner",
+        "rimir/theme",
+        "rimir/typed"
     ],
     "themes": [
         "tiddlywiki/vanilla",

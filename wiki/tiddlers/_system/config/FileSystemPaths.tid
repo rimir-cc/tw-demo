@@ -1,0 +1,7 @@
+created: 20190611125748662
+modified: 20221223083552641
+title: $:/config/FileSystemPaths
+type: text/vnd.tiddlywiki
+
+[is[system]removeprefix[$:/]addprefix[_system/]]
+[!has[draft.of]]

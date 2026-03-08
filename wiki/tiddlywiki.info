@@ -14,7 +14,8 @@
         "rimir/realms",
         "rimir/runner",
         "rimir/theme",
-        "rimir/typed"
+        "rimir/typed",
+        "rimir/explide"
     ],
     "themes": [
         "tiddlywiki/vanilla",

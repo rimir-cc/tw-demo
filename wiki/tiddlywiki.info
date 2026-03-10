@@ -16,7 +16,8 @@
         "rimir/theme",
         "rimir/typed",
         "rimir/explide",
-        "rimir/minver"
+        "rimir/minver",
+        "rimir/llm-connect"
     ],
     "themes": [
         "tiddlywiki/vanilla",

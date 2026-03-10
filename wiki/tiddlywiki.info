@@ -15,7 +15,8 @@
         "rimir/runner",
         "rimir/theme",
         "rimir/typed",
-        "rimir/explide"
+        "rimir/explide",
+        "rimir/minver"
     ],
     "themes": [
         "tiddlywiki/vanilla",

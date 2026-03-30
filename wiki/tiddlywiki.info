@@ -19,7 +19,8 @@
         "rimir/minver",
         "rimir/llm-connect",
         "rimir/statewrap",
-        "rimir/appify"
+        "rimir/appify",
+        "rimir/frontmatter"
     ],
     "themes": [
         "tiddlywiki/vanilla",

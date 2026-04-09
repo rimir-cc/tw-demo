@@ -13,6 +13,7 @@
         "rimir/orga-tools",
         "rimir/realms",
         "rimir/runner",
+        "rimir/file-pipeline",
         "rimir/theme",
         "rimir/typed",
         "rimir/explide",

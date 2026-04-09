@@ -49,6 +49,7 @@ jobs:
             diffsync
             frontmatter
             scattered-binaries
+            file-pipeline
           )
           for plugin in "${plugins[@]}"; do
             git clone --depth 1 "https://github.com/rimir-cc/tw-${plugin}.git" "wiki/plugins/rimir/${plugin}"
@@ -57,7 +58,7 @@ jobs:
 
       - name: Prepare server-side plugins for static demo
         run: |
-          server_plugins=(ext-connect file-upload filesystem-watcher git-int realms runner scattered-binaries)
+          server_plugins=(ext-connect file-upload filesystem-watcher git-int realms runner scattered-binaries file-pipeline)
           warning='<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:12px 16px;margin-bottom:16px;color:#664d03;">⚠️ <strong>Demo mode</strong> — This is a server-side plugin. Its core functionality requires a running TiddlyWiki Node.js server and is not available in this static demo. Documentation and settings are shown for reference.</div>'
 
           for plugin in "${server_plugins[@]}"; do

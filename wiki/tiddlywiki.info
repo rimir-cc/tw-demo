@@ -2,6 +2,7 @@
     "description": "Demo wiki for rimir plugins",
     "plugins": [
         "tiddlywiki/highlight",
+        "tiddlywiki/markdown",
         "rimir/components",
         "rimir/core-hook",
         "rimir/doc-template",

@@ -22,7 +22,8 @@
         "rimir/llm-connect",
         "rimir/statewrap",
         "rimir/appify",
-        "rimir/frontmatter"
+        "rimir/frontmatter",
+        "rimir/namespace"
     ],
     "themes": [
         "tiddlywiki/vanilla",

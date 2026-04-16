@@ -1,0 +1,38 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Basic Graph
+title: demo/cytoscape-basic
+type: text/vnd.tiddlywiki
+
+! Basic Graph
+
+A simple graph with colored nodes, edges, and different line styles.
+
+<$graph>
+  <$node $tiddler="A" label="Node A" color="CornflowerBlue"/>
+  <$node $tiddler="B" label="Node B" color="Coral"/>
+  <$node $tiddler="C" label="Node C" color="MediumSeaGreen"/>
+  <$node $tiddler="D" label="Node D" color="Gold"/>
+  <$edge $from="A" $to="B"/>
+  <$edge $from="B" $to="C"/>
+  <$edge $from="C" $to="D"/>
+  <$edge $from="A" $to="C" stroke="dashed"/>
+  <$edge $from="B" $to="D" stroke="dotted"/>
+</$graph>
+
+!! Source
+
+```
+<$graph>
+  <$node $tiddler="A" label="Node A" color="CornflowerBlue"/>
+  <$node $tiddler="B" label="Node B" color="Coral"/>
+  <$node $tiddler="C" label="Node C" color="MediumSeaGreen"/>
+  <$node $tiddler="D" label="Node D" color="Gold"/>
+  <$edge $from="A" $to="B"/>
+  <$edge $from="B" $to="C"/>
+  <$edge $from="C" $to="D"/>
+  <$edge $from="A" $to="C" stroke="dashed"/>
+  <$edge $from="B" $to="D" stroke="dotted"/>
+</$graph>
+```

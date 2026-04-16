@@ -1,0 +1,44 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Static Clusters
+title: demo/cytoscape-static-clusters
+type: text/vnd.tiddlywiki
+
+! Static (Declarative) Clusters
+
+For hardcoded grouping without drag-drop, set `cluster` directly on `<$node>`. Container nodes use the `__cluster__` prefix.
+
+<$graph>
+  <$node $tiddler="__cluster__Engineering" label="Engineering"/>
+  <$node $tiddler="sc:frontend" label="Frontend" cluster="__cluster__Engineering" color="RoyalBlue"/>
+  <$node $tiddler="sc:backend" label="Backend" cluster="__cluster__Engineering" color="RoyalBlue"/>
+  <$node $tiddler="sc:devops" label="DevOps" cluster="__cluster__Engineering" color="RoyalBlue"/>
+
+  <$node $tiddler="__cluster__Sales" label="Sales"/>
+  <$node $tiddler="sc:retail" label="Retail" cluster="__cluster__Sales" color="DarkOrange"/>
+  <$node $tiddler="sc:enterprise" label="Enterprise" cluster="__cluster__Sales" color="DarkOrange"/>
+
+  <$edge $from="sc:frontend" $to="sc:backend"/>
+  <$edge $from="sc:backend" $to="sc:devops"/>
+  <$edge $from="sc:frontend" $to="sc:retail" stroke="dashed"/>
+</$graph>
+
+!! Source
+
+```
+<$graph>
+  <$node $tiddler="__cluster__Engineering" label="Engineering"/>
+  <$node $tiddler="sc:frontend" label="Frontend" cluster="__cluster__Engineering"/>
+  <$node $tiddler="sc:backend" label="Backend" cluster="__cluster__Engineering"/>
+
+  <$node $tiddler="__cluster__Sales" label="Sales"/>
+  <$node $tiddler="sc:retail" label="Retail" cluster="__cluster__Sales"/>
+  <$node $tiddler="sc:enterprise" label="Enterprise" cluster="__cluster__Sales"/>
+
+  <$edge $from="sc:frontend" $to="sc:backend"/>
+  <$edge $from="sc:frontend" $to="sc:retail" stroke="dashed"/>
+</$graph>
+```
+
+Note: The `__cluster__` prefix tells the Cytoscape adapter to style the node as a compound container (dashed border, semi-transparent background, label at top).

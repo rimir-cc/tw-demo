@@ -1,0 +1,30 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Node Shapes
+title: demo/cytoscape-shapes
+type: text/vnd.tiddlywiki
+
+! Node Shapes
+
+Cytoscape maps tw-graph shapes to native equivalents.
+
+<$graph physics="no">
+  <$node $tiddler="shape:dot" label="dot (default)" $pos="0,0"/>
+  <$node $tiddler="shape:box" label="box" shape="box" $pos="200,0" color="Wheat"/>
+  <$node $tiddler="shape:diamond" label="diamond" shape="diamond" $pos="400,0" color="Plum"/>
+  <$node $tiddler="shape:triangle" label="triangle" shape="triangle" $pos="100,180" color="LightCoral"/>
+  <$node $tiddler="shape:star" label="star" shape="star" $pos="300,180" color="Gold"/>
+  <$node $tiddler="shape:hexagon" label="hexagon" shape="hexagon" $pos="500,180" color="PaleGreen"/>
+</$graph>
+
+!! Shape mapping
+
+|!tw-graph |!Cytoscape |
+|`dot` (default) |ellipse |
+|`box` / `square` |rectangle |
+|`diamond` |diamond |
+|`triangle` |triangle |
+|`star` |star |
+|`hexagon` |hexagon |
+|`database` |barrel |

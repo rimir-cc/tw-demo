@@ -1,0 +1,71 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Interactive Clusters
+title: demo/cytoscape-clusters
+type: text/vnd.tiddlywiki
+
+! Interactive Clusters
+
+Drag nodes onto each other to group them visually. Each graph stores its cluster config independently.
+
+<$graph physics="no">
+<$properties.persistent $dataTiddler="$:/state/demo/cluster-positions">
+<$properties $for="graph" clusterData="$:/state/demo/clusters">
+<$properties $for="nodes" color="SteelBlue" size="20">
+
+  <$node $tiddler="demo:alice" label="Alice" $pos=<<pos>>/>
+  <$node $tiddler="demo:bob" label="Bob" $pos=<<pos>>/>
+  <$node $tiddler="demo:carol" label="Carol" $pos=<<pos>>/>
+  <$node $tiddler="demo:dave" label="Dave" $pos=<<pos>>/>
+  <$node $tiddler="demo:eve" label="Eve" $pos=<<pos>> color="Crimson"/>
+  <$node $tiddler="demo:frank" label="Frank" $pos=<<pos>> color="DarkGoldenRod"/>
+
+  <$edge $from="demo:alice" $to="demo:bob"/>
+  <$edge $from="demo:bob" $to="demo:carol"/>
+  <$edge $from="demo:carol" $to="demo:dave"/>
+  <$edge $from="demo:dave" $to="demo:eve"/>
+  <$edge $from="demo:eve" $to="demo:frank"/>
+  <$edge $from="demo:alice" $to="demo:eve" stroke="dashed"/>
+
+</$properties>
+</$properties>
+</$properties.persistent>
+</$graph>
+
+!! Try it
+
+# ''Drag Alice onto Bob'' → creates "Cluster #1" containing both
+# ''Drag Carol onto the cluster'' → adds her to the group
+# ''Double-click'' the cluster label → rename it (e.g. "Team A")
+# ''Double-click'' again → pick a color from the palette
+# ''Drag a node far away'' (200+ px from where you grabbed it) → removes it from the cluster
+# ''Drag one cluster onto another'' → nests them
+
+!! How it works
+
+Clusters are named visual groups — not tiddlers. They're stored as JSON in the config tiddler (`$:/state/demo/clusters`). Each graph can have its own config.
+
+|!Gesture |!Effect |
+|Drag node → node |Create cluster |
+|Drag node → cluster |Add to cluster |
+|Drag 200+ px |Remove from cluster |
+|Double-click label |Rename + color |
+|Drag cluster → cluster |Nest clusters |
+|Remove all members |Auto-delete cluster |
+
+!! Source
+
+```
+<$graph physics="no">
+<$properties.persistent $dataTiddler="$:/state/demo/cluster-positions">
+<$properties $for="graph" clusterData="$:/state/demo/clusters">
+<$properties $for="nodes" color="SteelBlue" size="20">
+  <$node $tiddler="demo:alice" label="Alice" $pos=<<pos>>/>
+  <$node $tiddler="demo:bob" label="Bob" $pos=<<pos>>/>
+  ...
+</$properties>
+</$properties>
+</$properties.persistent>
+</$graph>
+```

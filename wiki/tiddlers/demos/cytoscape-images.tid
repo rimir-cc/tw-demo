@@ -1,0 +1,34 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Image Nodes
+title: demo/cytoscape-images
+type: text/vnd.tiddlywiki
+
+! Image Nodes
+
+Nodes can display images using the `image` property. Set `circular="true"` for circular clipping.
+
+<$graph physics="no">
+  <$node $tiddler="img:tw" label="TiddlyWiki" image="$:/core/images/globe" size="30" $pos="0,0"/>
+  <$node $tiddler="img:new" label="New" image="$:/core/images/new-button" size="30" $pos="200,0"/>
+  <$node $tiddler="img:save" label="Save" image="$:/core/images/save-button" circular="true" size="30" $pos="400,0"/>
+  <$node $tiddler="img:tag" label="Tag" image="$:/core/images/tag-button" circular="true" size="30" $pos="100,180"/>
+  <$node $tiddler="img:home" label="Home" image="$:/core/images/home-button" size="30" $pos="300,180"/>
+  <$edge $from="img:tw" $to="img:new"/>
+  <$edge $from="img:tw" $to="img:save"/>
+  <$edge $from="img:new" $to="img:tag"/>
+  <$edge $from="img:save" $to="img:home"/>
+</$graph>
+
+!! Source
+
+```
+<$graph physics="no">
+  <$node $tiddler="img:tw" label="TiddlyWiki" image="$:/core/images/globe" size="30" $pos="0,0"/>
+  <$node $tiddler="img:save" label="Save" image="$:/core/images/save-button" circular="true" size="30" $pos="400,0"/>
+  ...
+</$graph>
+```
+
+Set `circular="true"` for round image clipping — useful for avatars or icons.

@@ -1,0 +1,36 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Background & Drop
+title: demo/cytoscape-background
+type: text/vnd.tiddlywiki
+
+! Background Image & Canvas Events
+
+Graphs support a background image and canvas-level events (focus, blur, tiddler drop).
+
+<$graph physics="no">
+<$properties $for="graph" background="$:/core/images/globe">
+<$properties $for="nodes" color="RoyalBlue">
+
+  <$node $tiddler="bg:center" label="Center" $pos="200,100" size="25"/>
+  <$node $tiddler="bg:left" label="Left" $pos="50,100" size="15"/>
+  <$node $tiddler="bg:right" label="Right" $pos="350,100" size="15"/>
+  <$edge $from="bg:center" $to="bg:left"/>
+  <$edge $from="bg:center" $to="bg:right"/>
+
+</$properties>
+</$properties>
+</$graph>
+
+!! Source
+
+```
+<$graph physics="no">
+<$properties $for="graph" background="$:/core/images/globe">
+  ...
+</$properties>
+</$graph>
+```
+
+The `background` property accepts any tiddler title containing an image.

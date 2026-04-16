@@ -1,0 +1,49 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Properties Cascade
+title: demo/cytoscape-properties
+type: text/vnd.tiddlywiki
+
+! Properties Cascade
+
+Use `<$properties>` with `$filter` to style groups of nodes. Higher specificity wins.
+
+<$graph>
+<$properties $for="nodes" color="LightGray" size="18">
+<$properties $filter="[prefix[prop:team]]" color="SteelBlue" size="22">
+<$properties $filter="[prefix[prop:lead]]" color="Crimson" size="32">
+<$properties $for="edges" color="Silver" arrows="to">
+
+  <$node $tiddler="prop:lead:cto" label="CTO"/>
+  <$node $tiddler="prop:team:fe" label="Frontend"/>
+  <$node $tiddler="prop:team:be" label="Backend"/>
+  <$node $tiddler="prop:team:ops" label="Ops"/>
+  <$node $tiddler="prop:dev1" label="Dev 1"/>
+  <$node $tiddler="prop:dev2" label="Dev 2"/>
+  <$node $tiddler="prop:dev3" label="Dev 3"/>
+
+  <$edge $from="prop:lead:cto" $to="prop:team:fe"/>
+  <$edge $from="prop:lead:cto" $to="prop:team:be"/>
+  <$edge $from="prop:lead:cto" $to="prop:team:ops"/>
+  <$edge $from="prop:team:fe" $to="prop:dev1"/>
+  <$edge $from="prop:team:be" $to="prop:dev2"/>
+  <$edge $from="prop:team:ops" $to="prop:dev3"/>
+
+</$properties>
+</$properties>
+</$properties>
+</$properties>
+</$graph>
+
+!! How it works
+
+```
+<$properties $for="nodes" color="LightGray" size="18">         <%-- default --%>
+<$properties $filter="[prefix[prop:team]]" color="SteelBlue">   <%-- teams --%>
+<$properties $filter="[prefix[prop:lead]]" color="Crimson" size="32"> <%-- leads --%>
+```
+
+* All nodes start gray at size 18
+* Nodes matching `[prefix[prop:team]]` become blue at size 22
+* Nodes matching `[prefix[prop:lead]]` become red at size 32

@@ -1,0 +1,48 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Edge Styles
+title: demo/cytoscape-edges
+type: text/vnd.tiddlywiki
+
+! Edge Styles
+
+Arrows, line styles, labels, and curve types.
+
+<$graph physics="no">
+<$properties $for="nodes" color="SteelBlue" size="15">
+
+  <$node $tiddler="es:a" label="A" $pos="0,0"/>
+  <$node $tiddler="es:b" label="B" $pos="250,0"/>
+  <$node $tiddler="es:c" label="C" $pos="0,150"/>
+  <$node $tiddler="es:d" label="D" $pos="250,150"/>
+  <$node $tiddler="es:e" label="E" $pos="500,0"/>
+  <$node $tiddler="es:f" label="F" $pos="500,150"/>
+
+  <$edge $from="es:a" $to="es:b" arrows="to" label="directed"/>
+  <$edge $from="es:c" $to="es:d" arrows="from" stroke="dashed" label="dashed reversed"/>
+  <$edge $from="es:a" $to="es:d" stroke="dotted" width="3" label="dotted thick"/>
+  <$edge $from="es:b" $to="es:e" arrows="to" color="Crimson" label="colored"/>
+  <$edge $from="es:e" $to="es:f" smooth="no" label="straight"/>
+  <$edge $from="es:c" $to="es:f" arrows="to" width="2" color="DarkGreen" label="bold green"/>
+
+</$properties>
+</$graph>
+
+!! Source
+
+```
+<$edge $from="es:a" $to="es:b" arrows="to" label="directed"/>
+<$edge $from="es:c" $to="es:d" arrows="from" stroke="dashed" label="dashed reversed"/>
+<$edge $from="es:a" $to="es:d" stroke="dotted" width="3" label="dotted thick"/>
+<$edge $from="es:b" $to="es:e" arrows="to" color="Crimson" label="colored"/>
+<$edge $from="es:e" $to="es:f" smooth="no" label="straight"/>
+```
+
+|!Property |!Values |
+|`arrows` |`to`, `from`, `middle`, `no` |
+|`stroke` |`solid`, `dashed`, `dotted` |
+|`smooth` |`dynamic`, `continuous`, `curvedCW`, `curvedCCW`, `cubicBezier`, `no` |
+|`width` |number (px) |
+|`color` |any CSS color |
+|`label` |text on edge |

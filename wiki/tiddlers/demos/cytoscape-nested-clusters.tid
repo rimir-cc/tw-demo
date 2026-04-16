@@ -1,0 +1,47 @@
+created: 20260416120000000
+modified: 20260416120000000
+tags: demo
+caption: Cytoscape: Nested Clusters
+title: demo/cytoscape-nested-clusters
+type: text/vnd.tiddlywiki
+
+! Nested Clusters
+
+Clusters can be nested inside other clusters. Drag one cluster container onto another to nest them.
+
+<$graph physics="no">
+<$properties.persistent $dataTiddler="$:/state/demo/nested-pos">
+<$properties $for="graph" clusterData="$:/state/demo/nested-clusters">
+<$properties $for="nodes" color="SteelBlue" size="15">
+
+  <$node $tiddler="nc:alice" label="Alice" $pos=<<pos>>/>
+  <$node $tiddler="nc:bob" label="Bob" $pos=<<pos>>/>
+  <$node $tiddler="nc:carol" label="Carol" $pos=<<pos>>/>
+  <$node $tiddler="nc:dave" label="Dave" $pos=<<pos>>/>
+  <$node $tiddler="nc:eve" label="Eve" $pos=<<pos>>/>
+  <$node $tiddler="nc:frank" label="Frank" $pos=<<pos>>/>
+
+  <$edge $from="nc:alice" $to="nc:bob"/>
+  <$edge $from="nc:bob" $to="nc:carol"/>
+  <$edge $from="nc:carol" $to="nc:dave"/>
+  <$edge $from="nc:dave" $to="nc:eve"/>
+  <$edge $from="nc:eve" $to="nc:frank"/>
+
+</$properties>
+</$properties>
+</$properties.persistent>
+</$graph>
+
+!! Try it
+
+# Drag ''Alice'' onto ''Bob'' → creates "Cluster #1"
+# Drag ''Carol'' onto ''Dave'' → creates "Cluster #2"
+# Drag ''Cluster #1'' onto ''Cluster #2'' → nests #1 inside #2
+# Double-click cluster labels to rename (e.g. "Frontend" inside "Engineering")
+# Pick different colors for outer and inner clusters
+
+!! Rules
+
+* Circular nesting is blocked (can't nest A inside B if B is already inside A)
+* Dragging a cluster far away from its parent cluster removes the nesting
+* Empty clusters auto-delete when their last member is removed

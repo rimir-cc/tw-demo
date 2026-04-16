@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 
 Drag nodes onto each other to group them visually. Each graph stores its cluster config independently.
 
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph physics="no">
 <$properties.persistent $dataTiddler="$:/state/demo/cluster-positions">
 <$properties $for="graph" clusterData="$:/state/demo/clusters">
@@ -32,6 +33,7 @@ Drag nodes onto each other to group them visually. Each graph stores its cluster
 </$properties>
 </$properties.persistent>
 </$graph>
+</div>
 
 !! Try it
 
@@ -57,6 +59,7 @@ Clusters are named visual groups — not tiddlers. They're stored as JSON in the
 !! Source
 
 ```
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph physics="no">
 <$properties.persistent $dataTiddler="$:/state/demo/cluster-positions">
 <$properties $for="graph" clusterData="$:/state/demo/clusters">
@@ -68,4 +71,5 @@ Clusters are named visual groups — not tiddlers. They're stored as JSON in the
 </$properties>
 </$properties.persistent>
 </$graph>
+</div>
 ```

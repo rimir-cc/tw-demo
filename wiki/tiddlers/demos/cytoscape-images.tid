@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 
 Nodes can display images using the `image` property. Set `circular="true"` for circular clipping.
 
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph physics="no">
   <$node $tiddler="img:tw" label="TiddlyWiki" image="$:/core/images/globe" size="30" $pos="0,0"/>
   <$node $tiddler="img:new" label="New" image="$:/core/images/new-button" size="30" $pos="200,0"/>
@@ -20,15 +21,18 @@ Nodes can display images using the `image` property. Set `circular="true"` for c
   <$edge $from="img:new" $to="img:tag"/>
   <$edge $from="img:save" $to="img:home"/>
 </$graph>
+</div>
 
 !! Source
 
 ```
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph physics="no">
   <$node $tiddler="img:tw" label="TiddlyWiki" image="$:/core/images/globe" size="30" $pos="0,0"/>
   <$node $tiddler="img:save" label="Save" image="$:/core/images/save-button" circular="true" size="30" $pos="400,0"/>
   ...
 </$graph>
+</div>
 ```
 
 Set `circular="true"` for round image clipping — useful for avatars or icons.

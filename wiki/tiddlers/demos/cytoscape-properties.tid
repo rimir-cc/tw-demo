@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 
 Use `<$properties>` with `$filter` to style groups of nodes. Higher specificity wins.
 
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph>
 <$properties $for="nodes" color="LightGray" size="18">
 <$properties $filter="[prefix[prop:team]]" color="SteelBlue" size="22">
@@ -35,6 +36,7 @@ Use `<$properties>` with `$filter` to style groups of nodes. Higher specificity 
 </$properties>
 </$properties>
 </$graph>
+</div>
 
 !! How it works
 

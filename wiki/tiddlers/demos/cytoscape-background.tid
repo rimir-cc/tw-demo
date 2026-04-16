@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 
 Graphs support a background image and canvas-level events (focus, blur, tiddler drop).
 
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph physics="no">
 <$properties $for="graph" background="$:/core/images/globe">
 <$properties $for="nodes" color="RoyalBlue">
@@ -22,15 +23,18 @@ Graphs support a background image and canvas-level events (focus, blur, tiddler 
 </$properties>
 </$properties>
 </$graph>
+</div>
 
 !! Source
 
 ```
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph physics="no">
 <$properties $for="graph" background="$:/core/images/globe">
   ...
 </$properties>
 </$graph>
+</div>
 ```
 
 The `background` property accepts any tiddler title containing an image.

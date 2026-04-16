@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 
 Cytoscape maps tw-graph shapes to native equivalents.
 
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph physics="no">
   <$node $tiddler="shape:dot" label="dot (default)" $pos="0,0"/>
   <$node $tiddler="shape:box" label="box" shape="box" $pos="200,0" color="Wheat"/>
@@ -17,6 +18,7 @@ Cytoscape maps tw-graph shapes to native equivalents.
   <$node $tiddler="shape:star" label="star" shape="star" $pos="300,180" color="Gold"/>
   <$node $tiddler="shape:hexagon" label="hexagon" shape="hexagon" $pos="500,180" color="PaleGreen"/>
 </$graph>
+</div>
 
 !! Shape mapping
 

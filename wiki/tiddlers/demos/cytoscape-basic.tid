@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 
 A simple graph with colored nodes, edges, and different line styles.
 
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph>
   <$node $tiddler="A" label="Node A" color="CornflowerBlue"/>
   <$node $tiddler="B" label="Node B" color="Coral"/>
@@ -20,10 +21,12 @@ A simple graph with colored nodes, edges, and different line styles.
   <$edge $from="A" $to="C" stroke="dashed"/>
   <$edge $from="B" $to="D" stroke="dotted"/>
 </$graph>
+</div>
 
 !! Source
 
 ```
+<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
 <$graph>
   <$node $tiddler="A" label="Node A" color="CornflowerBlue"/>
   <$node $tiddler="B" label="Node B" color="Coral"/>
@@ -35,4 +38,5 @@ A simple graph with colored nodes, edges, and different line styles.
   <$edge $from="A" $to="C" stroke="dashed"/>
   <$edge $from="B" $to="D" stroke="dotted"/>
 </$graph>
+</div>
 ```

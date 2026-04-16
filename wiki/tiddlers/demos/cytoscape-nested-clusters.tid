@@ -9,18 +9,17 @@ type: text/vnd.tiddlywiki
 
 Clusters can be nested inside other clusters. Drag one cluster container onto another to nest them.
 
-<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
-<$graph physics="no">
-<$properties.persistent $dataTiddler="$:/state/demo/nested-pos">
+<div style="height:450px;overflow:hidden;">
+<$graph>
 <$properties $for="graph" clusterData="$:/state/demo/nested-clusters">
 <$properties $for="nodes" color="SteelBlue" size="15">
 
-  <$node $tiddler="nc:alice" label="Alice" $pos=<<pos>>/>
-  <$node $tiddler="nc:bob" label="Bob" $pos=<<pos>>/>
-  <$node $tiddler="nc:carol" label="Carol" $pos=<<pos>>/>
-  <$node $tiddler="nc:dave" label="Dave" $pos=<<pos>>/>
-  <$node $tiddler="nc:eve" label="Eve" $pos=<<pos>>/>
-  <$node $tiddler="nc:frank" label="Frank" $pos=<<pos>>/>
+  <$node $tiddler="nc:alice" label="Alice"/>
+  <$node $tiddler="nc:bob" label="Bob"/>
+  <$node $tiddler="nc:carol" label="Carol"/>
+  <$node $tiddler="nc:dave" label="Dave"/>
+  <$node $tiddler="nc:eve" label="Eve"/>
+  <$node $tiddler="nc:frank" label="Frank"/>
 
   <$edge $from="nc:alice" $to="nc:bob"/>
   <$edge $from="nc:bob" $to="nc:carol"/>
@@ -30,7 +29,6 @@ Clusters can be nested inside other clusters. Drag one cluster container onto an
 
 </$properties>
 </$properties>
-</$properties.persistent>
 </$graph>
 </div>
 

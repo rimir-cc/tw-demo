@@ -9,18 +9,17 @@ type: text/vnd.tiddlywiki
 
 Drag nodes onto each other to group them visually. Each graph stores its cluster config independently.
 
-<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
-<$graph physics="no">
-<$properties.persistent $dataTiddler="$:/state/demo/cluster-positions">
+<div style="height:450px;overflow:hidden;">
+<$graph>
 <$properties $for="graph" clusterData="$:/state/demo/clusters">
 <$properties $for="nodes" color="SteelBlue" size="20">
 
-  <$node $tiddler="demo:alice" label="Alice" $pos=<<pos>>/>
-  <$node $tiddler="demo:bob" label="Bob" $pos=<<pos>>/>
-  <$node $tiddler="demo:carol" label="Carol" $pos=<<pos>>/>
-  <$node $tiddler="demo:dave" label="Dave" $pos=<<pos>>/>
-  <$node $tiddler="demo:eve" label="Eve" $pos=<<pos>> color="Crimson"/>
-  <$node $tiddler="demo:frank" label="Frank" $pos=<<pos>> color="DarkGoldenRod"/>
+  <$node $tiddler="demo:alice" label="Alice"/>
+  <$node $tiddler="demo:bob" label="Bob"/>
+  <$node $tiddler="demo:carol" label="Carol"/>
+  <$node $tiddler="demo:dave" label="Dave"/>
+  <$node $tiddler="demo:eve" label="Eve" color="Crimson"/>
+  <$node $tiddler="demo:frank" label="Frank" color="DarkGoldenRod"/>
 
   <$edge $from="demo:alice" $to="demo:bob"/>
   <$edge $from="demo:bob" $to="demo:carol"/>
@@ -31,7 +30,6 @@ Drag nodes onto each other to group them visually. Each graph stores its cluster
 
 </$properties>
 </$properties>
-</$properties.persistent>
 </$graph>
 </div>
 
@@ -59,17 +57,15 @@ Clusters are named visual groups — not tiddlers. They're stored as JSON in the
 !! Source
 
 ```
-<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
-<$graph physics="no">
-<$properties.persistent $dataTiddler="$:/state/demo/cluster-positions">
+<div style="height:450px;overflow:hidden;">
+<$graph>
 <$properties $for="graph" clusterData="$:/state/demo/clusters">
 <$properties $for="nodes" color="SteelBlue" size="20">
-  <$node $tiddler="demo:alice" label="Alice" $pos=<<pos>>/>
-  <$node $tiddler="demo:bob" label="Bob" $pos=<<pos>>/>
+  <$node $tiddler="demo:alice" label="Alice"/>
+  <$node $tiddler="demo:bob" label="Bob"/>
   ...
 </$properties>
 </$properties>
-</$properties.persistent>
 </$graph>
 </div>
 ```

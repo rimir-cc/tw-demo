@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 
 For hardcoded grouping without drag-drop, set `cluster` directly on `<$node>`. Container nodes use the `__cluster__` prefix.
 
-<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
+<div style="height:450px;overflow:hidden;">
 <$graph>
   <$node $tiddler="__cluster__Engineering" label="Engineering"/>
   <$node $tiddler="sc:frontend" label="Frontend" cluster="__cluster__Engineering" color="RoyalBlue"/>
@@ -29,7 +29,7 @@ For hardcoded grouping without drag-drop, set `cluster` directly on `<$node>`. C
 !! Source
 
 ```
-<div style="height:450px;border:1px solid #ddd;border-radius:4px;margin:8px 0;">
+<div style="height:450px;overflow:hidden;">
 <$graph>
   <$node $tiddler="__cluster__Engineering" label="Engineering"/>
   <$node $tiddler="sc:frontend" label="Frontend" cluster="__cluster__Engineering"/>

@@ -1,0 +1,6 @@
+title: $:/demo-graph-fix
+tags: $:/tags/Stylesheet
+type: text/vnd.tiddlywiki
+
+/* Fix TW auto-<p> wrapping inside graph bounding box causing infinite height growth */
+.graph-boundingbox > p { display: contents; }

@@ -2,6 +2,10 @@ title: $:/demo-graph-fix
 tags: $:/tags/Stylesheet
 type: text/vnd.tiddlywiki
 
-/* Fix TW auto-<p> wrapping inside graph bounding box causing infinite height growth */
+/* Fix TW auto-<p> wrapping: make <p> between container and graph-canvas transparent to layout */
 .boundingbox > p { display: contents; margin: 0; }
 .boundingbox .graph-canvas { flex: 1 1 auto; height: 0; min-height: 0; }
+
+/* For graphs without boundingbox: ensure graph-canvas fills available height */
+.graph-canvas { height: 100%; }
+.graph-canvas > div { height: 100%; }

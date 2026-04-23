@@ -20,6 +20,7 @@
         "rimir/explide",
         "rimir/minver",
         "rimir/llm-connect",
+        "rimir/llm-help",
         "rimir/statewrap",
         "rimir/appify",
         "rimir/frontmatter",

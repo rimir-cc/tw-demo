@@ -25,7 +25,8 @@
         "rimir/appify",
         "rimir/frontmatter",
         "rimir/namespace",
-        "rimir/cytoscape-engine"
+        "rimir/cytoscape-engine",
+        "rimir/knowledge-app"
     ],
     "themes": [
         "tiddlywiki/vanilla",

@@ -27,7 +27,8 @@
         "rimir/namespace",
         "rimir/cytoscape-engine",
         "rimir/knowledge-app",
-        "rimir/drop-attach"
+        "rimir/drop-attach",
+        "rimir/work-focus"
     ],
     "themes": [
         "tiddlywiki/vanilla",

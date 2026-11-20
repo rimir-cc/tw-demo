@@ -28,7 +28,8 @@
         "rimir/cytoscape-engine",
         "rimir/knowledge-app",
         "rimir/drop-attach",
-        "rimir/work-focus"
+        "rimir/work-focus",
+        "rimir/outline"
     ],
     "themes": [
         "tiddlywiki/vanilla",

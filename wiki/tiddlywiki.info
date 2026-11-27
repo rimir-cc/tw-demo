@@ -29,7 +29,9 @@
         "rimir/knowledge-app",
         "rimir/drop-attach",
         "rimir/work-focus",
-        "rimir/outline"
+        "rimir/outline",
+        "rimir/graphviz",
+        "rimir/mermaid"
     ],
     "themes": [
         "tiddlywiki/vanilla",
